@@ -1,14 +1,7 @@
-//
-//  EmptyAppTests.swift
-//  EmptyAppTests
-//
-//  Created by Slava Anishchuk on 05.03.2024.
-//
-
 import XCTest
 @testable import EmptyApp
 
-final class EmptyAppTests: XCTestCase {
+final class ApplicationTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
