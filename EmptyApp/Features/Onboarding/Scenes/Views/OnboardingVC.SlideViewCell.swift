@@ -16,7 +16,8 @@ extension OnboardingVC {
         )
 
         private let summaryLabel: UILabel = .init(
-            font: .systemFont(ofSize: 17)
+            font: .systemFont(ofSize: 17),
+            textAlignment: .center
         )
 
         override init(frame: CGRect) {

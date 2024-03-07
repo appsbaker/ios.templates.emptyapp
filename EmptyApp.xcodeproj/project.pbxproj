@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		773630102B99C62F0065B51B /* Platform in Frameworks */ = {isa = PBXBuildFile; productRef = 7736300F2B99C62F0065B51B /* Platform */; };
 		77701C392B97477C002700B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77701C382B97477C002700B0 /* AppDelegate.swift */; };
 		77701C3B2B97477C002700B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77701C3A2B97477C002700B0 /* SceneDelegate.swift */; };
 		77701C422B97477C002700B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77701C412B97477C002700B0 /* Assets.xcassets */; };
@@ -23,9 +24,8 @@
 		77701C7F2B974BF8002700B0 /* OnboardingVC.SlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77701C762B974BF8002700B0 /* OnboardingVC.SlideView.swift */; };
 		77701C802B974BF8002700B0 /* OnboardingFeature.SceneFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77701C772B974BF8002700B0 /* OnboardingFeature.SceneFactory.swift */; };
 		77701C822B974C24002700B0 /* FeatureFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77701C812B974C24002700B0 /* FeatureFactory.swift */; };
-		77701C852B974D04002700B0 /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = 77701C842B974D04002700B0 /* DesignSystem */; };
-		77701C872B974D07002700B0 /* Platform in Frameworks */ = {isa = PBXBuildFile; productRef = 77701C862B974D07002700B0 /* Platform */; };
 		77701C8A2B974EEE002700B0 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 77701C892B974EEE002700B0 /* SnapKit */; };
+		77B577792B99C65B008D4F3E /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = 77B577782B99C65B008D4F3E /* DesignSystem */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,9 +65,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77B577792B99C65B008D4F3E /* DesignSystem in Frameworks */,
 				77701C8A2B974EEE002700B0 /* SnapKit in Frameworks */,
-				77701C852B974D04002700B0 /* DesignSystem in Frameworks */,
-				77701C872B974D07002700B0 /* Platform in Frameworks */,
+				773630102B99C62F0065B51B /* Platform in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,10 +142,10 @@
 		77701C6C2B974BF8002700B0 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				77701C6F2B974BF8002700B0 /* Scenes */,
 				77701C6E2B974BF8002700B0 /* OnboardingFeature.swift */,
 				77701C6D2B974BF8002700B0 /* OnboardingFeature.Coordinator.swift */,
 				77701C772B974BF8002700B0 /* OnboardingFeature.SceneFactory.swift */,
-				77701C6F2B974BF8002700B0 /* Scenes */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -195,9 +195,9 @@
 			);
 			name = EmptyApp;
 			packageProductDependencies = (
-				77701C842B974D04002700B0 /* DesignSystem */,
-				77701C862B974D07002700B0 /* Platform */,
 				77701C892B974EEE002700B0 /* SnapKit */,
+				7736300F2B99C62F0065B51B /* Platform */,
+				77B577782B99C65B008D4F3E /* DesignSystem */,
 			);
 			productName = EmptyApp;
 			productReference = 77701C352B97477C002700B0 /* EmptyApp.app */;
@@ -251,6 +251,8 @@
 			mainGroup = 77701C2C2B97477C002700B0;
 			packageReferences = (
 				77701C882B974E09002700B0 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				7736300E2B99C62F0065B51B /* XCLocalSwiftPackageReference "../Platform" */,
+				77B577772B99C65B008D4F3E /* XCLocalSwiftPackageReference "../DesignSystem" */,
 			);
 			productRefGroup = 77701C362B97477C002700B0 /* Products */;
 			projectDirPath = "";
@@ -593,6 +595,17 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		7736300E2B99C62F0065B51B /* XCLocalSwiftPackageReference "../Platform" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../Platform;
+		};
+		77B577772B99C65B008D4F3E /* XCLocalSwiftPackageReference "../DesignSystem" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../DesignSystem;
+		};
+/* End XCLocalSwiftPackageReference section */
+
 /* Begin XCRemoteSwiftPackageReference section */
 		77701C882B974E09002700B0 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
@@ -605,11 +618,7 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		77701C842B974D04002700B0 /* DesignSystem */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = DesignSystem;
-		};
-		77701C862B974D07002700B0 /* Platform */ = {
+		7736300F2B99C62F0065B51B /* Platform */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Platform;
 		};
@@ -617,6 +626,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 77701C882B974E09002700B0 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		77B577782B99C65B008D4F3E /* DesignSystem */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DesignSystem;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
